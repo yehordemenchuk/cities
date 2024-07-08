@@ -1,0 +1,308 @@
+abu dhabi  
+accra  
+addis ababa  
+adelaide  
+alexandria  
+algiers  
+amman  
+amsterdam  
+ankara  
+asuncion  
+athens  
+auckland  
+baghdad  
+baku  
+bamako  
+bangkok  
+barcelona  
+beijing  
+beirut  
+belgrade  
+bengaluru  
+berlin  
+bogota  
+brasília  
+bratislava  
+brisbane  
+brussels  
+bucharest  
+budapest  
+buenos aires  
+cairo  
+calgary  
+canberra  
+cape town  
+caracas  
+casablanca  
+chengdu  
+chicago  
+chisinau  
+copenhagen  
+dakar  
+damascus  
+dar es salaam  
+delhi  
+dhaka  
+djibouti  
+dodoma  
+doha  
+dubai  
+dublin  
+edinburgh  
+guangzhou  
+guatemala city  
+hanoi  
+harare  
+havana  
+helsinki  
+hong kong  
+houston  
+hyderabad  
+islamabad  
+istanbul  
+jakarta  
+jeddah  
+johannesburg  
+kabul  
+kampala  
+kathmandu  
+khartoum  
+kigali  
+kingston  
+kinshasa  
+kuala lumpur  
+kuwait city  
+kyiv  
+la paz  
+lagos  
+lahore  
+lima  
+lisbon  
+ljubljana  
+london  
+los angeles  
+lusaka  
+luxembourg  
+madrid  
+managua  
+manama  
+manila  
+maputo  
+marrakech  
+mashhad  
+medellin  
+melbourne  
+mexico city  
+miami  
+milan  
+minsk  
+mogadishu  
+monrovia  
+montevideo  
+montreal  
+moscow  
+mumbai  
+munich  
+nairobi  
+nashville  
+new delhi  
+new york  
+niamey  
+nicosia  
+oslo  
+ottawa  
+ouagadougou  
+panama city  
+paris  
+perth  
+phnom penh  
+port louis  
+port moresby  
+prague  
+pretoria  
+quito  
+rabat  
+reykjavik  
+riga  
+rio de janeiro  
+riyadh  
+rome  
+san jose  
+san juan  
+san salvador  
+santiago  
+santo domingo  
+sao paulo  
+sarajevo  
+seoul  
+singapore  
+skopje  
+sofia  
+stockholm  
+sydney  
+tallinn  
+tbilisi  
+tegucigalpa  
+tehran  
+tel aviv  
+thimphu  
+tokyo  
+toronto  
+tunis  
+ulaanbaatar  
+vaduz  
+valencia  
+vancouver  
+victoria  
+vienna  
+vilnius  
+warsaw  
+washington  
+wellington  
+windhoek  
+wuhan  
+yaounde  
+yerevan  
+yokohama  
+zagreb  
+zanzibar city  
+zurich  
+abidjan  
+abuja  
+accra  
+alexandria  
+ankara  
+antananarivo  
+antwerp  
+asheville  
+baltimore  
+basel  
+belfast  
+bilbao  
+boston  
+brasov  
+bremen  
+brno  
+brussels  
+buffalo  
+bydgoszcz  
+cagliari  
+chandigarh  
+charlotte  
+chattanooga  
+cluj-napoca  
+colombo  
+columbus  
+conakry  
+coventry  
+dallas  
+darwin  
+denver  
+detroit  
+durban  
+essen  
+faisalabad  
+fukuoka  
+gaborone  
+gaziantep  
+genoa  
+giza  
+gothenburg  
+graz  
+hamburg  
+hamilton  
+havana  
+homs  
+ingolstadt  
+irkutsk  
+izmir  
+jaipur  
+jefferson city  
+jinan  
+johor bahru  
+juarez  
+kano  
+karachi  
+kathmandu  
+kiev  
+kolkata  
+krakow  
+kumasi  
+leeds  
+leipzig  
+lille  
+limoges  
+linz  
+liverpool  
+lyon  
+malaga  
+malmo  
+mandalay  
+medan  
+mendoza  
+mombasa  
+nagoya  
+nairobi  
+nantes  
+nashik  
+nassau  
+newcastle  
+nizhny novgorod  
+norwich  
+nottingham  
+odessa  
+okayama  
+orlando  
+osaka  
+palermo  
+paramaribo  
+patna  
+phuket  
+pittsburgh  
+poznan  
+puebla  
+pune  
+pyongyang  
+quanzhou  
+recife  
+rotterdam  
+salt lake city  
+salzburg  
+samarkand  
+sapporo  
+sekondi-takoradi  
+sendai  
+seoul  
+seville  
+sheffield  
+stuttgart  
+surat  
+taichung  
+taipei  
+tangier  
+tianjin  
+tirana  
+toluca  
+touba  
+tunis  
+turin  
+ulsan  
+urumqi  
+valletta  
+vitoria-gasteiz  
+volgograd  
+warsaw  
+wroclaw  
+wuxi  
+xalapa  
+xiamen  
+yangon  
+yaounde  
+yerevan  
+yokohama  
+zagreb  
+zaria  
+zanzibar  
+zhengzhou  
+zhuhai  
+zurich  
