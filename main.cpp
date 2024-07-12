@@ -1,14 +1,11 @@
-#include <iostream>
-#include <string>
-#include <vector>
-#include "cities.h"
+#include "mainwindow.h"
 
-int main() {
-    vector<string> cities_list(cities::cities_list_length);
+#include <QApplication>
 
-    load_cities(cities_list);
-
-    cout << generate_city("I", cities_list) << endl;
-
-    return 0;
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
+    MainWindow w;
+    w.show();
+    return a.exec();
 }
