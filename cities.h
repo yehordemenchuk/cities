@@ -15,6 +15,8 @@ namespace cities
 }
 
 void load_cities(vector<string> &cities_list);
+void random_generator_init();
+string generate_first_city(vector<string> &cities_list);
 string generate_city(string user_city, vector<string> &cities_list);
 bool validate_city(string user_city, vector<string> cities_list);
 

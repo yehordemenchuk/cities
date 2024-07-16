@@ -22,7 +22,7 @@ void Dialog::start_game()
 {
     show();
 
-    ui->game_output->setText(generate_city("a", cities_list).c_str());
+    ui->game_output->setText(generate_first_city(cities_list).c_str());
 }
 
 void Dialog::on_enter_button_clicked()
