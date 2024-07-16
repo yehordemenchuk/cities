@@ -1,3 +1,4 @@
+#include <iostream>
 #include <string>
 #include <vector>
 #include <fstream>
@@ -7,8 +8,13 @@ void load_cities(vector<string> &cities_list)
 {
     ifstream cities_file { cities::cities_file_name };
 
+    if (!cities_file)
+        cout << "Error" << endl;
+
     for (int i = 0; i != cities::cities_list_length; ++i)
+    {
         getline(cities_file, cities_list[i]);
+    }
 }
 
 string generate_city(string user_city, vector<string> &cities_list) 
