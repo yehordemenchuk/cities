@@ -12,16 +12,19 @@ SOURCES += \
     cities.cpp \
     dialog.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    winnerwindow.cpp
 
 HEADERS += \
     cities.h \
     dialog.h \
-    mainwindow.h
+    mainwindow.h \
+    winnerwindow.h
 
 FORMS += \
     dialog.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    winnerwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
