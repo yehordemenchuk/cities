@@ -32,4 +32,6 @@ private:
     vector<string> cities_list;
 };
 
+void show_winnerwindow(Dialog* dialog_ptr);
+
 #endif // DIALOG_H
