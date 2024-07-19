@@ -1,5 +1,6 @@
 #include <QMessageBox>
 #include "mainwindow.h"
+#include "dialog.h"
 #include "ui_mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
@@ -16,7 +17,9 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_play_button_clicked()
 {
-    QMessageBox::about(this, "Cities", "Game");
+    close();
+
+    cities_game();
 }
 
 void MainWindow::on_exit_button_clicked()

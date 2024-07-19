@@ -37,7 +37,7 @@ public:
             MainWindow->setObjectName("MainWindow");
         MainWindow->resize(800, 600);
         QIcon icon;
-        icon.addFile(QString::fromUtf8(":/img/mainwindow_icon.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        icon.addFile(QString::fromUtf8(":/img/cities_icon.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
         MainWindow->setWindowIcon(icon);
         MainWindow->setStyleSheet(QString::fromUtf8("QMainWindow {\n"
 "	background-color: green;\n"
