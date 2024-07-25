@@ -11,20 +11,20 @@ CONFIG += c++17
 SOURCES += \
     cities.cpp \
     dialog.cpp \
+    endgamewindow.cpp \
     main.cpp \
     mainwindow.cpp \
-    winnerwindow.cpp
 
 HEADERS += \
     cities.h \
     dialog.h \
+    endgamewindow.h \
     mainwindow.h \
-    winnerwindow.h
 
 FORMS += \
     dialog.ui \
+    endgamewindow.ui \
     mainwindow.ui \
-    winnerwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
