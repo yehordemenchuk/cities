@@ -2,7 +2,7 @@
 #include "dialog.h"
 #include "ui_dialog.h"
 #include "cities.h"
-#include "winnerwindow.h"
+#include "endgamewindow.h"
 
 Dialog::Dialog(QWidget *parent)
     : QDialog(parent)
@@ -26,9 +26,9 @@ void Dialog::start_game()
     ui->game_output->setText(generate_first_city(cities_list).c_str());
 }
 
-void show_winnerwindow(Dialog* dialog_ptr, cities::game_result result)
+void show_endgamewindow(Dialog* dialog_ptr, cities::game_result result)
 {
-    Winnerwindow win_window(nullptr, dialog_ptr, result);
+    Endgamewindow win_window(nullptr, dialog_ptr, result);
 
     win_window.set_game_result();
 
@@ -60,7 +60,7 @@ void Dialog::on_enter_button_clicked()
         string new_city = generate_city(user_city, cities_list);
 
         if (new_city == cities::no_city)
-            show_winnerwindow(this, cities::USER_WON);
+            show_endgamewindow(this, cities::USER_WON);
 
         else
         {
@@ -71,7 +71,7 @@ void Dialog::on_enter_button_clicked()
     }
 
     else if (validity == cities::ABSENT_CITY_FIRST_LETTER)
-        show_winnerwindow(this, cities::USER_LOOSE);
+        show_endgamewindow(this, cities::USER_LOOSE);
 
     else
         ui->error_label->setText("Invalid city name");
