@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 #include <QDialog>
+#include "cities.h"
 
 using namespace std;
 
@@ -32,6 +33,7 @@ private:
     vector<string> cities_list;
 };
 
-void show_winnerwindow(Dialog* dialog_ptr);
+void show_endgamewindow(Dialog* dialog_ptr, cities::game_result result);
+void cities_game();
 
 #endif // DIALOG_H

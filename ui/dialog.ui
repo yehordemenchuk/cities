@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>639</width>
+    <height>553</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Cities</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/img/cities_icon.png</normaloff>:/img/cities_icon.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+	background-color: green;
+}</string>
+  </property>
+  <widget class="QPushButton" name="enter_button">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>468</y>
+     <width>131</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+	background-color: rgb(0, 85, 0);
+}
+
+QPushButton:hover {
+	background-color:  rgb(0, 102, 0);
+}
+
+QPushButton:pressed {
+	background-color:  rgb(0, 124, 0);
+}</string>
+   </property>
+   <property name="text">
+    <string>Enter</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="exit_button">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>470</y>
+     <width>131</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+	background-color: rgb(0, 85, 0);
+}
+
+QPushButton:hover {
+	background-color:  rgb(0, 102, 0);
+}
+
+QPushButton:pressed {
+	background-color:  rgb(0, 124, 0);
+}</string>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="game_output">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>140</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="user_input">
+   <property name="geometry">
+    <rect>
+     <x>212</x>
+     <y>190</y>
+     <width>181</width>
+     <height>28</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="error_label">
+   <property name="geometry">
+    <rect>
+     <x>212</x>
+     <y>250</y>
+     <width>181</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
