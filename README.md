@@ -23,3 +23,4 @@ Cities is a classic geography-based word game where players name cities in turns
 2. Search to file cities (it`s link to cities.exe)
 3. Run the game by clicking on the cities file
 4. Play game
+---
