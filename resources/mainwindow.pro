@@ -26,6 +26,8 @@ FORMS += \
     endgamewindow.ui \
     mainwindow.ui \
 
+win32:RC_FILE = icon.rc
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
