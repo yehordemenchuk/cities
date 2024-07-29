@@ -13,9 +13,9 @@ Cities is a classic geography-based word game where players name cities in turns
 ## Example
 1. The game starts with the city "Amsterdam."
 2. The next player must name a city starting with "M."
-3. They choose "Madrid."
+3. They choose "Madrid"
 4. The next player must name a city starting with "D."
-5. They choose "Denver."
+5. They choose "Denver"
 6. The game continues with cities like "Rome," "Edinburgh," and so on until a player cannot continue.
 ---
 ## Installation
