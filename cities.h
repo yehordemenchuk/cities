@@ -34,6 +34,6 @@ string generate_first_city(vector<string> &cities_list);
 string str_to_lower(string str);
 int get_city_index(char letter, vector<string> cities_list);
 string generate_city(string user_city, vector<string> &cities_list);
-cities::city_validity validate_city(string user_city, vector<string> &cities_list);
+cities::city_validity validate_city(string user_city, string generated_city, vector<string> &cities_list);
 
 #endif

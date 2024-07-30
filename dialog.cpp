@@ -46,35 +46,46 @@ void cities_game()
     dialog.exec();
 }
 
+void Dialog::update_output_city(string user_city)
+{
+    ui->game_output->clear();
+    ui->error_label->clear();
+
+    string new_city = generate_city(user_city, cities_list);
+
+    if (new_city == cities::no_city)
+        show_endgamewindow(this, cities::USER_WON);
+
+    else
+    {
+        ui->user_input->clear();
+
+        ui->game_output->setText(new_city.c_str());
+    }
+}
+
 void Dialog::on_enter_button_clicked()
 {
     string user_city = str_to_lower(ui->user_input->text().toStdString());
-    string game_city = ui->game_output->text().toStdString();
-    cities::city_validity validity = validate_city(user_city, cities_list);
+    cities::city_validity validity = validate_city(user_city, ui->game_output->text().toStdString(), cities_list);
 
-    if (validity == cities::VALID && user_city[0] == game_city[game_city.length() - cities::shift])
+    switch(validity)
     {
-        ui->game_output->clear();
-        ui->error_label->clear();
+        case cities::VALID:
+            update_output_city(user_city);
 
-        string new_city = generate_city(user_city, cities_list);
+            break;
 
-        if (new_city == cities::no_city)
-            show_endgamewindow(this, cities::USER_WON);
+        case cities::ABSENT_CITY_FIRST_LETTER:
+            show_endgamewindow(this, cities::USER_LOOSE);
 
-        else
-        {
-            ui->user_input->clear();
+            break;
 
-            ui->game_output->setText(new_city.c_str());
-        }
+        case cities::INVALID:
+            ui->error_label->setText("Invalid city name");
+
+            break;
     }
-
-    else if (validity == cities::ABSENT_CITY_FIRST_LETTER)
-        show_endgamewindow(this, cities::USER_LOOSE);
-
-    else
-        ui->error_label->setText("Invalid city name");
 }
 
 void Dialog::on_exit_button_clicked()
