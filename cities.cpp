@@ -89,12 +89,12 @@ string generate_city(string user_city, vector<string> &cities_list)
     return generated_city;
 }
 
-cities::city_validity validate_city(string user_city, vector<string> &cities_list)
+cities::city_validity validate_city(string user_city, string generated_city, vector<string> &cities_list)
 {
     if (user_city != cities::no_city && get_city_index(user_city[0], cities_list) == cities::absent_city_index)
         return cities::ABSENT_CITY_FIRST_LETTER;
 
-    int max = cities_list.size() - cities::shift, min = 0, mid;
+    int max = cities_list.size() - cities::shift, min = 0, mid, len = generated_city.length();
 
     while (min <= max) 
     {
@@ -102,7 +102,7 @@ cities::city_validity validate_city(string user_city, vector<string> &cities_lis
 
         string founded_city = cities_list[mid];
 
-        if (founded_city == user_city)
+        if (founded_city == user_city && founded_city[0] == generated_city[len - cities::shift])
         {
             cities_list.erase(cities_list.begin() + mid);
 

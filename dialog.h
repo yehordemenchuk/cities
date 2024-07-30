@@ -23,6 +23,8 @@ public:
 
     void start_game();
 
+    void update_output_city(string user_city);
+
 private slots:
     void on_enter_button_clicked();
 
