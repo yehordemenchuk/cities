@@ -67,9 +67,8 @@ void Dialog::update_output_city(string user_city)
 void Dialog::on_enter_button_clicked()
 {
     string user_city = str_to_lower(ui->user_input->text().toStdString());
-    cities::city_validity validity = validate_city(user_city, ui->game_output->text().toStdString(), cities_list);
 
-    switch(validity)
+    switch(validate_city(user_city, ui->game_output->text().toStdString(), cities_list))
     {
         case cities::VALID:
             update_output_city(user_city);
