@@ -51,7 +51,7 @@ void Dialog::update_output_city(string user_city)
     ui->game_output->clear();
     ui->error_label->clear();
 
-    string new_city = generate_city(user_city, cities_list);
+    string new_city { generate_city(user_city, cities_list) };
 
     if (new_city == cities::no_city)
         show_endgamewindow(this, cities::USER_WON);
@@ -66,7 +66,7 @@ void Dialog::update_output_city(string user_city)
 
 void Dialog::on_enter_button_clicked()
 {
-    string user_city = str_to_lower(ui->user_input->text().toStdString());
+    string user_city { process_city_name(ui->user_input->text().toStdString()) };
 
     switch(validate_city(user_city, ui->game_output->text().toStdString(), cities_list))
     {

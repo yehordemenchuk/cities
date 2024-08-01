@@ -21,15 +21,15 @@ void Endgamewindow::set_game_result()
 {
     switch(current_result)
     {
-    case cities::USER_WON:
-        ui->game_result->setText("Congrats! You won!\nDo you want to restart?");
+        case cities::USER_WON:
+            ui->game_result->setText("Congrats! You won!\nDo you want to restart?");
 
-        break;
+            break;
 
-    case cities::USER_LOOSE:
-        ui->game_result->setText(":( Yoy loose\nDo you want to restart?");
+        case cities::USER_LOOSE:
+            ui->game_result->setText(":( Yoy loose\nDo you want to restart?");
 
-        break;
+            break;
     }
 }
 
