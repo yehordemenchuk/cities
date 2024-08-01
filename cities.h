@@ -23,6 +23,7 @@ namespace cities
 
     const short cities_list_length = 273;
     const short shift = 1;
+    const short minimal_len = 1;
     const short absent_city_index = -1;
     const char cities_file_name[] = "naming_cities.txt";
     const char no_city[] = "";
@@ -31,8 +32,8 @@ namespace cities
 void load_cities(vector<string> &cities_list);
 void random_generator_init();
 string generate_first_city(vector<string> &cities_list);
-string str_to_lower(string str);
-int get_city_index(char letter, vector<string> cities_list);
+string process_city_name(string city_name);
+int get_city_index(string finding_element, vector<string> cities_list);
 string generate_city(string user_city, vector<string> &cities_list);
 cities::city_validity validate_city(string user_city, string generated_city, vector<string> &cities_list);
 

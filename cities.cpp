@@ -34,37 +34,40 @@ string generate_first_city(vector<string> &cities_list)
 {
     random_generator_init();
 
-    short first_city_index = rand() % (cities::cities_list_length - cities::shift);
+    short first_city_index(rand() % (cities::cities_list_length - cities::shift));
 
-    string first_city = cities_list[first_city_index];
+    string first_city { cities_list[first_city_index] };
 
     cities_list.erase(cities_list.begin() + first_city_index);
 
     return first_city;
 }
 
-string str_to_lower(string str)
+string process_city_name(string city_name)
 {
-    for (int i = 0, len = str.length(); i != len; ++i)
-        str[i] = tolower(str[i]);
+    for (int i = 0, len = city_name.length(); i != len; ++i)
+        city_name[i] = tolower(city_name[i]);
 
-    return str;
+    return city_name;
 }
 
-int get_city_index(char letter, vector<string> cities_list)
+int get_city_index(string finding_element, vector<string> cities_list)
 {
-    int max = cities_list.size() - cities::shift, min = 0, mid;
+    int max(cities_list.size() - cities::shift), min { 0 }, mid, finding_element_len(finding_element.length());
 
     while (min <= max)
     {
         mid = (max + min) / 2;
 
-        char first_letter = cities_list[mid][0];
+        string founded_element { cities_list[mid] };
 
-        if (first_letter == letter)
+        if (finding_element_len == cities::minimal_len)
+            founded_element = founded_element[0];
+
+        if (founded_element == finding_element)
             return mid;
 
-        else if (first_letter > letter)
+        else if (founded_element > finding_element)
             max = mid - cities::shift;
 
         else
@@ -76,8 +79,8 @@ int get_city_index(char letter, vector<string> cities_list)
 
 string generate_city(string user_city, vector<string> &cities_list) 
 {
-    int index = get_city_index(user_city[user_city.length() - cities::shift], cities_list);
-    string generated_city = cities::no_city;
+    int index { get_city_index(string(1, user_city[user_city.length() - cities::shift]), cities_list) };
+    string generated_city { cities::no_city };
 
     if (index != cities::absent_city_index)
     {
@@ -91,30 +94,18 @@ string generate_city(string user_city, vector<string> &cities_list)
 
 cities::city_validity validate_city(string user_city, string generated_city, vector<string> &cities_list)
 {
-    if (user_city != cities::no_city && get_city_index(user_city[0], cities_list) == cities::absent_city_index)
+    char user_city_first_letter { user_city[0] };
+
+    if (user_city != cities::no_city && get_city_index(string(1, user_city_first_letter), cities_list) == cities::absent_city_index)
         return cities::ABSENT_CITY_FIRST_LETTER;
 
-    int max = cities_list.size() - cities::shift, min = 0, mid, len = generated_city.length();
+    int validating_city_index { get_city_index(user_city, cities_list) };
 
-    while (min <= max) 
-    {
-        mid = (max + min) / 2;
+    if (validating_city_index == cities::absent_city_index ||
+        user_city_first_letter != generated_city[generated_city.length() - cities::shift])
+        return cities::INVALID;
 
-        string founded_city = cities_list[mid];
+    cities_list.erase(cities_list.begin() + validating_city_index);
 
-        if (founded_city == user_city && founded_city[0] == generated_city[len - cities::shift])
-        {
-            cities_list.erase(cities_list.begin() + mid);
-
-            return cities::VALID;
-        }
-        
-        else if (founded_city > user_city)
-            max = mid - cities::shift;
-        
-        else
-            min = mid + cities::shift;
-    }
-
-    return cities::INVALID;
+    return cities::VALID;
 }

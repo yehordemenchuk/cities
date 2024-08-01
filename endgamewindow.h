@@ -5,7 +5,8 @@
 #include "dialog.h"
 #include "cities.h"
 
-namespace Ui {
+namespace Ui
+{
     class Endgamewindow;
 }
 
