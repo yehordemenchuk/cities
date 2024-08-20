@@ -25,7 +25,7 @@ namespace cities
     const short shift = 1;
     const short minimal_len = 1;
     const short absent_city_index = -1;
-    const char cities_file_name[] = "naming_cities.txt";
+    const char cities_file_path[] = ":\\cities_to_generate\\naming_cities.txt";
     const char no_city[] = "";
 }
 

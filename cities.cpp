@@ -1,18 +1,19 @@
 #include <string>
 #include <vector>
-#include <fstream>
 #include <cstdlib>
 #include <cctype>
 #include <ctime>
+#include <QFile>
+#include <QTextStream>
 #include <QCoreApplication>
 #include <QMessageBox>
 #include "cities.h"
 
 void load_cities(vector<string> &cities_list) 
 {
-    ifstream cities_file { cities::cities_file_name };
+    QFile cities_file { cities::cities_file_path };
 
-    if (!cities_file)
+    if (!cities_file.open(QIODevice::ReadOnly | QIODevice::Text))
     {
         qCritical() << "Error. Game file \"naming_cities.txt\" was corrupted or lost.";
 
@@ -21,8 +22,10 @@ void load_cities(vector<string> &cities_list)
         exit(EXIT_FAILURE);
     }
 
+    QTextStream in(&cities_file);
+
     for (int i = 0; i != cities::cities_list_length; ++i)
-        getline(cities_file, cities_list[i]);
+        cities_list[i] = in.readLine().toStdString();
 }
 
 void random_generator_init()
