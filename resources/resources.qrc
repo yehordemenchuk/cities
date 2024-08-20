@@ -2,4 +2,7 @@
     <qresource prefix="/img">
         <file>cities_icon.png</file>
     </qresource>
+    <qresource prefix="/cities_to_generate">
+        <file>naming_cities.txt</file>
+    </qresource>
 </RCC>
